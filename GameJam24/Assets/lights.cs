@@ -3,25 +3,25 @@ using UnityEngine;
 
 public class LightFlicker : MonoBehaviour
 {
-    public Light myLight; // Yanýp sönecek ýþýðý belirtin
-    public float countdownTime = 10.0f; // Geri sayým süresi
+    public Light myLight; // Yanï¿½p sï¿½necek ï¿½ï¿½ï¿½ï¿½ï¿½ belirtin
+    public float countdownTime = 10.0f; // Geri sayï¿½m sï¿½resi
 
     void Update()
     {
-        countdownTime -= Time.deltaTime; // Geri sayýmý azalt
+        countdownTime -= Time.deltaTime; // Geri sayï¿½mï¿½ azalt
 
         if (countdownTime <= 0)
         {
-            StartCoroutine(FlickerLight()); // Geri sayým bittiðinde ýþýðý yanýp söndür
+            StartCoroutine(FlickerLight()); // Geri sayï¿½m bittiï¿½inde ï¿½ï¿½ï¿½ï¿½ï¿½ yanï¿½p sï¿½ndï¿½r
         }
     }
 
     IEnumerator FlickerLight()
     {
-        while (true) // Sürekli yanýp sönsün
+        while (true) // Sï¿½rekli yanï¿½p sï¿½nsï¿½n
         {
-            myLight.enabled = !myLight.enabled; // Iþýðý aç/kapat
-            yield return new WaitForSeconds(0.5f); // Her yanýp sönme arasýnda bekleme süresi
-        }
+            myLight.enabled = !myLight.enabled; // Iï¿½ï¿½ï¿½ï¿½ aï¿½/kapat
+            yield return new WaitForSeconds(0.5f); // Her yanï¿½p sï¿½nme arasï¿½nda bekleme sï¿½resi
+ }
     }
 }
