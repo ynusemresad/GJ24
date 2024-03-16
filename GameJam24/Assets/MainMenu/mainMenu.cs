@@ -10,6 +10,7 @@ public class mainMenu : MonoBehaviour
 
     void Start()
     {
+        audioManager.instance.MenuMusic();
         
     }
 
