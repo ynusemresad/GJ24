@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/MainMenu/mainMenu.unity
     guid: 40d744a06a9ad4b489994ca58b909553
   - enabled: 1
-    path: Assets/Scenes/Room One-Beginning.unity
+    path: Assets/Scenes/Room_One-Beginning.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/sceneteset.unity
