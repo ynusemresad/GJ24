@@ -45,7 +45,14 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Countertop"))
         {
-            
+            if (parca1 && parca2 && parca3)
+            {
+                //Drag & Drop sahnesine gir.
+            }
+            else
+            {
+                //Burada UI ile tum parcalari toplamadin tarzi bir uyari cikabilir
+            }
         }
     }
 }
