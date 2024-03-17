@@ -15,6 +15,13 @@ public class UI : MonoBehaviour
     public string mainMenuScene;
 
 
+    //sayaç
+    public GameObject TimeUI;
+    public float timeValue;
+    public TMP_Text timeText;
+
+
+
 
     void Update()
     {
@@ -23,7 +30,20 @@ public class UI : MonoBehaviour
             //oyunu durdurma ve pause menüsüne girme.
             PauseNoPause();
         }
-        
+        //sayaç
+
+        if (timeValue > 0)
+        {
+            timeValue -= Time.deltaTime;
+        }
+        else
+        {
+            timeValue = 0;
+            gameOver();
+        }
+        displayTime(timeValue);
+
+
     }
 
 
@@ -68,4 +88,30 @@ public class UI : MonoBehaviour
         Application.Quit();
         Debug.Log("oyundan çıkıldı");
     }
+
+
+    public void gameOver()
+    {
+        if(GameOverScreen != null)
+        {
+            TimeUI.SetActive(false);
+            GameOverScreen.SetActive(true);
+        }
+    }
+
+    //sayaç fonskiyonu
+
+    public void displayTime(float timetoDisplay)
+    {
+        if (timetoDisplay < 0)
+        {
+            timetoDisplay = 0;
+        }
+
+        float minutes = Mathf.FloorToInt(timetoDisplay / 60);
+        float seconds = Mathf.FloorToInt(timetoDisplay % 60);
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+
 }
