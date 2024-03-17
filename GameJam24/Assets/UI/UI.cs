@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
+    public static UI instance;
     // UI elementleri tanımlama
     public GameObject GameOverScreen;
 
@@ -22,10 +23,13 @@ public class UI : MonoBehaviour
 
 
     //puzzle collectibles
-    public TMP_Text collectibles; 
+    public TMP_Text collectibles;
 
 
-
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Update()
     {
