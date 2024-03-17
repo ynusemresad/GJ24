@@ -42,5 +42,10 @@ public class NewBehaviourScript : MonoBehaviour
 
             
         }
+
+        if (other.gameObject.CompareTag("Countertop"))
+        {
+            
+        }
     }
 }

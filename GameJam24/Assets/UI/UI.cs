@@ -21,6 +21,10 @@ public class UI : MonoBehaviour
     public TMP_Text timeText;
 
 
+    //puzzle collectibles
+    public TMP_Text collectibles; 
+
+
 
 
     void Update()
@@ -113,5 +117,10 @@ public class UI : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    //collectibles ui
+    public void CollectiblesUpdate(int amount)
+    {
+        collectibles.text = amount.ToString();
+    }
 
 }
